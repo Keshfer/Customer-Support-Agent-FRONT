@@ -138,20 +138,28 @@ Make sure you have docker installed
 
     2. Create and run a docker container
     ```
-    docker run --name NAME_OF_CONTAINER -e POSTGRES_PASSWORD=DESIRED_PASSWORD postgres
+    docker run --name NAME_OF_CONTAINER -e POSTGRES_PASSWORD=DESIRED_PASSWORD pgvector/pgvector:pg16
     ```
 
 
-    ```createdb database_name```
+    ```docker exec -it NAME_OF_CONTAINER createdb -U postgres database_name```
 
     or connect vis psql and enter
+   
 
-    ```CREATE database_name```
+    ```
+    docker exec -it NAME_OF_CONTAINER psql -U postgres
+    CREATE database_name
+    ```
 
     3. Run the schema once connected to the database
     ```
     CREATE SCHEMA database_schema.sql
     ```
+    or use
+   ```
+   docker exec -it NAME_OF_CUSTOMER psql -U postgres -f backend/database_schema.sql
+   ```
 
     4. Set the DATABASE_URL environment variable
 
@@ -159,13 +167,19 @@ Make sure you have docker installed
     DATABASE_URL=postgresql://postgres:PASSWORD@localhost:5432/DATABASE_NAME
     ```
 
-4. From project root, run the Flask backend 
+5. From project root, run the Flask backend 
 
 ```
 python -m backend.app
 ```
 
-5. run the frontend using
+6. install package.json with
+
+```
+npm install
+```
+
+7. run the frontend using
 
 ```
 npm run dev
