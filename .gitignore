@@ -3,6 +3,7 @@
 # __pycache__/ - Python bytecode cache directories created when Python imports modules
 # These are automatically generated and should not be committed
 __pycache__/
+backend/__pycache__/
 *.py[cod]  # Compiled Python files (.pyc, .pyo, .pyd)
 *$py.class  # Python class files
 
