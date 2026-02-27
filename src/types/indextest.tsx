@@ -76,7 +76,7 @@ if (!validUserMessage.success) {
 const validAgentMessage = MessageScheme.safeParse({
 	id: "123",
 	message: "Hello, how are you?",
-	sender: "agent",
+	sender: 'assistant',
 	timestamp: "2026-01-13T12:00:00Z"
 });
 if (!validAgentMessage.success) {

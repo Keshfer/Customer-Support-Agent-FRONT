@@ -49,7 +49,7 @@ export default function MessageInputTest() {
       const agentMessage: Message = {
         id: `agent-${Date.now()}`,
         message: `You said: "${messageText}". This is a simulated agent response.`,
-        sender: 'agent',
+        sender: 'assistant',
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, agentMessage]);

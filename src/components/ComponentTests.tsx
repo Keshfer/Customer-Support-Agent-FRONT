@@ -53,7 +53,7 @@ export default function ComponentTests() {
       const agentMessage: Message = {
         id: `agent-${Date.now()}`,
         message: `I received your message: "${messageText}". This is a test response from the agent.`,
-        sender: 'agent',
+        sender: 'assistant',
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, agentMessage]);

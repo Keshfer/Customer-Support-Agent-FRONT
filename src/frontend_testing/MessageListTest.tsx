@@ -48,7 +48,7 @@ export default function MessageListTest() {
     const newMessage: Message = {
       id: `agent-${messageCounter}`,
       message: `Agent message ${messageCounter + 1}: This is a test response from the agent. I'm here to help you with any questions you might have.`,
-      sender: 'agent',
+      sender: 'assistant',
       timestamp: new Date().toISOString(),
     };
     setMessages((prev) => [...prev, newMessage]);
@@ -66,7 +66,7 @@ export default function MessageListTest() {
       const newMessage: Message = {
         id: `agent-${messageCounter}`,
         message: `Agent response ${messageCounter + 1}: I've processed your request and here's my response.`,
-        sender: 'agent',
+        sender: 'assistant',
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, newMessage]);
@@ -111,7 +111,7 @@ export default function MessageListTest() {
       {
         id: 'init-1',
         message: 'Hello! Welcome to the Customer Support Agent. How can I help you today?',
-        sender: 'agent',
+        sender: 'assistant',
         timestamp: new Date(Date.now() - 60000).toISOString(),
       },
       {

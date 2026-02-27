@@ -21,7 +21,7 @@ export default function MessageBubbleTest() {
   const agentMessage: Message = {
     id: '1',
     message: 'Hello! I\'m your AI assistant. How can I help you today?',
-    sender: 'agent',
+    sender: 'assistant',
     timestamp: new Date().toISOString(),
   };
 
@@ -35,7 +35,7 @@ export default function MessageBubbleTest() {
   const longAgentMessage: Message = {
     id: '3',
     message: 'I\'d be happy to help you with your account! I can assist you with account settings, billing questions, or any other issues you might have. Please let me know what specific help you need.',
-    sender: 'agent',
+    sender: 'assistant',
     timestamp: new Date(Date.now() - 60000).toISOString(), // 1 minute ago
   };
 
@@ -67,12 +67,12 @@ export default function MessageBubbleTest() {
         <div className="bg-background-dark p-6 rounded-lg border-2 border-white max-w-4xl">
           <MessageBubble 
             message={agentMessage} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Bob"
           />
           <MessageBubble 
             message={longAgentMessage} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Alice"
           />
         </div>
@@ -107,7 +107,7 @@ export default function MessageBubbleTest() {
         <div className="bg-background-dark p-6 rounded-lg border-2 border-white max-w-4xl">
           <MessageBubble 
             message={agentMessage} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Support Agent"
           />
           <MessageBubble 
@@ -116,7 +116,7 @@ export default function MessageBubbleTest() {
           />
           <MessageBubble 
             message={longAgentMessage} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Support Agent"
           />
           <MessageBubble 
@@ -127,10 +127,10 @@ export default function MessageBubbleTest() {
             message={{
               id: '6',
               message: 'Perfect! I\'ve reset your password. Check your email for the reset link.',
-              sender: 'agent',
+              sender: 'assistant',
               timestamp: new Date().toISOString(),
             }} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Support Agent"
           />
           <MessageBubble 
@@ -150,9 +150,9 @@ export default function MessageBubbleTest() {
             message={{
               id: '7',
               message: 'This message has no timestamp',
-              sender: 'agent',
+              sender: 'assistant',
             }} 
-            sender="agent" 
+            sender="assistant" 
             agentName="Test Agent"
           />
           <MessageBubble 
@@ -173,7 +173,7 @@ export default function MessageBubbleTest() {
         </h2>
         <div className="bg-background-dark p-6 rounded-lg border-2 border-white max-w-4xl">
           <ul className="list-disc list-inside space-y-2 text-text-primary">
-            <li className={agentMessage.sender === 'agent' ? 'text-green-400' : 'text-red-400'}>
+            <li className={agentMessage.sender === 'assistant' ? 'text-green-400' : 'text-red-400'}>
               ✓ Agent messages are light blue and left-aligned
             </li>
             <li className={userMessage.sender === 'user' ? 'text-green-400' : 'text-red-400'}>
