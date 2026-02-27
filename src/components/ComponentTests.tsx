@@ -23,7 +23,7 @@ export default function ComponentTests() {
     {
       id: '1',
       message: 'Hello! I\'m your AI assistant. How can I help you today?',
-      sender: 'agent',
+      sender: 'assistant',
       timestamp: new Date(Date.now() - 60000).toISOString(),
     },
   ]);
