@@ -85,7 +85,7 @@ export default function MessageListTest() {
       newMessages.push({
         id: `msg-${messageCounter + i}`,
         message: `Bulk message ${messageCounter + i + 1}: This is message number ${i + 1} in a series of messages to test scrolling behavior.`,
-        sender: i % 2 === 0 ? 'user' : 'agent',
+        sender: i % 2 === 0 ? 'user' : 'assistant',
         timestamp: new Date(Date.now() - (10 - i) * 1000).toISOString(),
       });
     }
