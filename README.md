@@ -2,7 +2,7 @@
 
 An LLM-powered customer support agent designed to perform question-and-answer conversations with users. The agent analyzes user-provided web sources and provides detailed, organized, and readable answers to questions about the content from those sources.
 
-[Interactable Demo website](https://customer-support-agent-demo.up.railway.app/)
+# [Click here for interactable demo website](https://customer-support-agent-demo.up.railway.app/)
 
 ![Project Preview](./assets/preview.gif)
 
