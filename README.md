@@ -187,4 +187,8 @@ npm install
 npm run dev
 ```
 
+## Improvements
+1. Add cookie-based user-specific conversations. Use before-requests and after-requests decorators to fetch and verify user ids in order to prevent race conditions when the conversation routes are hit simultaneously on website load. Have these cookies hashed for security. Also create a cron job to delete inactive users.
+2.  Have websites be rescraped if etag/last_modified has changed or the html hash is different. Use the old content until the background scrapping and processing is finished.
+
 
