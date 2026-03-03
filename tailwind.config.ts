@@ -52,6 +52,12 @@ const config: Config = {
           secondary: '#a0a0a0', // Secondary text color (grey)
           muted: '#666666',     // Muted text color
         },
+        github: {
+          DEFAULT: '#00ff00', // background color for button
+          text: '#000000', // text color for button
+          hover: '#00cc00', // hover color for button background
+
+        }
       },
     },
   },

@@ -57,11 +57,15 @@ export default function ChatWindow({
     <div className="flex flex-col h-full bg-background">
       {/* Header section with title */}
       <header className="flex-shrink-0 bg-header border-b border-header-light px-6 py-4">
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-4">
           {/* Header title */}
           <h1 className="text-text-primary text-xl font-semibold">
             Customer Support Agent
           </h1>
+          {/*Link button to github repository*/}
+          <a href="https://github.com/Keshfer/Customer-Support-Agent-FRONT/tree/main?tab=readme-ov-file" target="_blank" rel= "noopener noreferrer">
+            <button className="bg-github hover:bg-github-hover text-github-text px-2 py-2 rounded-md">Github</button>
+          </a>
           
           {/* Future: Navigation controls can be added here */}
           {/* - Back arrow icon */}
